@@ -1,0 +1,4 @@
+- Use the .strip() method to strip the ';,;' and '09/15/17' strings
+- Declare a new empty data list, split the string at ' ,' to create lists and iteratively add it to data
+- iterate through each list and strip the whitespace using .strip() method
+- declare 3 empty lists, iteratively addd info to them
