@@ -1,36 +1,66 @@
-# ask the user for the temperature
-temp = int(input("What is the temperature?"))
-# evaluate if the temp, is less than 0
-if temp<0:
-    print(f"The temperature is {temp}")
-# print if the input is less than 0
-
-# use string formatting to adjust your output
-
-
-# 'it is freezing: TRUE'
-
-### EXERCISE 1 ###
-"""
-You have a budget of £10 and want to write a program to decide which burger restaurant to go to.
-
-Input the price of a burger using input()
-Check whether the price is less than or equal (<=) 10.00
-Print the result in the format below
-Burger is within budget: True
-
-Hint: remember to convert the input from a string to a decimal with float()
 
 """
-#Input the price of a burger using input()
-price = float(input("Please input the price of the burger (no currency, please)"))
-condition = price<=10.00
-#Check whether the price is less than or equal (<=) 10.00
-if condition:
-    print(f"Burger is within budget: {condition}")
+Make a list of game scores. Using list functions write code to output information of the scores in the following format:
+    Number of scores: 10
+    Highest score: 200
+    Lowest score: 3
+Extension: Output all of the scores in descending order
+"""
+score_list = [22, 7, 3, 9, 25, 7, 8, 6, 3, 200]
+print(f"Number of scores: {len(score_list)}")
+print(f"Higest score: {max(score_list)}")
+print(f"Lowest score: {min(score_list)}")
 
-#Print the result in the format below
-#Burger is within budget: True
+""""
+Whenever I'm shopping and I buy some bread I always forget to buy butter.
+Create a list and if 'bread' is in the list, add 'butter' to the shopping list.
+Try running the program with and without bread in the list to check that your program works.
+Remember the in operator checks if an item is in a list and the .append() method adds an item to a list.
+"""
+
+shopping_list_1 = ['eggs', 'bread', 'milk', 'chilli flakes']
+shopping_list_2 = ['eggs', 'milk', 'chilli flakes']
+
+if 'bread' in shopping_list_1:
+    shopping_list_1.append('butter')
+
+if 'bread' in shopping_list_2:
+    shopping_list_2.append('butter')
+
+print(f"shopping_list_1: {shopping_list_1}")
+print(f"shopping_list_2: {shopping_list_2}")      
+      
+'''
+Print the values of name, post_code and street_number from the dictionary
+'''
 
 
+place = {'name': 'The Anchor', 'post_code': 'E14 6HY', 'street_number': '54','location': {'longitude': 127, 'latitude': 63}}
+print(place['name'])
+print(place['post_code'])
+print(place['street_number'])
+
+"""
+Using a for loop, output the values name, colour and price of each dictionary in the list
+"""
+fruits = [
+
+    {'name': 'apple', 'colour': 'red', 'price': 0.12},
+
+    {'name': 'banana', 'colour': 'yellow', 'price': 0.2},
+
+    {'name': 'pear', 'colour': 'green', 'price': 0.19},
+
+]
+
+for i in range(len(fruits)):
+    print(fruits[i]['name'])
+    print(fruits[i]['colour'])
+    print(fruits[i]['price'])
+
+names=[]
+colours = []
+prices = []
+
+for a in range()
 
