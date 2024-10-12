@@ -1,0 +1,2 @@
+deleted Functions/README.markdown
+deleted Functions/main.py in-session exercises 
