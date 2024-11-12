@@ -21,4 +21,3 @@ flights = [
      "available":  18,
      "flight_id": 1818},
 ]
-
