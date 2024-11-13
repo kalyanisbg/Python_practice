@@ -4,11 +4,14 @@ class EvenNumbers:
         return self
     
     def __next__(self):
-        self.num += 2
-        return self.num
+        if self.num < 10:
+            self.num += 2
+            return self.num
+        else:
+            raise StopIteration
     
 
 evens = EvenNumbers()
-even_iter = iter(evens)
+even_iter = iter(evens) 
 while True:
     print(next(even_iter))
