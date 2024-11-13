@@ -1,7 +1,8 @@
 class EvenNumbers:
     def __iter__(self):
-        self.num = 0
+        self.num = 0  # this is where num is defined?
         return self
+
     def __next__(self):
         self.num += 2
         return self.num
