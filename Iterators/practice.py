@@ -78,6 +78,11 @@ class Reverse:
 	•	Example Output: 0, 2, 4, 6, 8
 '''
 
+def even_numbers(limit):
+    num = 0
+    while num <= limit:
+        yield num
+        num += 2
 
 '''
 3. Fibonacci Sequence Generator
@@ -87,6 +92,24 @@ class Reverse:
 	•	Example Output: 0, 1, 1, 2, 3
 '''
 
+def fibonacci(limit):
+    first_term = 0
+    second_term = 1
+    current = 1
+    count = 2
+    yield first_term
+    yield second_term
+    while count < limit:
+        current += first_term
+        first_term = second_term
+        second_term = current
+        count += 1
+        yield current
+
+# for num in fibonacci(6):
+#     print(num)
+
+
 '''
 4. Prime Number Generator
 
@@ -94,6 +117,12 @@ class Reverse:
 	•	Example Input: prime_numbers(20)
 	•	Example Output: 2, 3, 5, 7, 11, 13, 17, 19
 '''
+
+def prime_numbers(limit):
+    num = 2
+    while num <= limit:
+        
+
 
 '''
 5. Custom Iterable Class
