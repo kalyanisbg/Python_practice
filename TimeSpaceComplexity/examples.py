@@ -107,3 +107,33 @@ def first_dupe_value5(array):
 
 # Space
 # O(1) since no new data structures are created
+
+def print_first_item(items):
+    print(items[0])
+
+# Time O(1)
+# Space O(1)
+
+def print_all_items(items):
+    for item in items:
+        print(item)
+
+# Time O(n)
+# Space O(1)
+
+def print_all_items_twice(items):
+    for item in items:
+        print(item)
+    for item in items:
+        print(item)
+
+# Time O(n)
+# Space O(1)
+
+def print_all_possible_ordered_pairs(items):
+    for first_item in items:
+        for second_item in items:
+            print(first_item, second_item)
+
+# Time O(n^2)
+# Space O(1)
