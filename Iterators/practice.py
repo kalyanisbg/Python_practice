@@ -1,3 +1,5 @@
+import numpy as np
+
 '''
 0. Create an iterator that counts numbers starting from 1 and continues until a specified limit
 '''
@@ -117,11 +119,22 @@ def fibonacci(limit):
 	•	Example Input: prime_numbers(20)
 	•	Example Output: 2, 3, 5, 7, 11, 13, 17, 19
 '''
+def is_prime(num):
+    for i in range(2, int(np.sqrt(num)) + 1):  # A number  n  is not prime if it is divisible by any number from  2  to  \sqrt{n} 
+        if num % i == 0:
+            return False
+    return True
+
 
 def prime_numbers(limit):
     num = 2
     while num <= limit:
-        
+        if is_prime(num):
+            yield num
+        num += 1
+
+# for num in prime_numbers(20):
+#     print(num)
 
 
 '''
@@ -172,3 +185,40 @@ def prime_numbers(limit):
 	•	Example Output: 5, 4, 3, 2, 1, 0
 '''
 
+"""
+CREATE A FIZZBUZZ-ESQUE ITERATOR
+* The first iteration should be 1
+* and then increasing integers
+* If a number is divisible by 3, return "Fizz".
+* If it's divisible by 5, return "Buzz".
+* If it's divisible by both 3 and 5, return "FizzBuzz".
+"""
+
+# define a Fizzbuzz class iterator
+# init (?), iter, next
+# init counter, current
+# iter return self
+# next
+class Fizzbuzz:
+    def __init__(self, limit):
+        self.limit = limit
+        self.current = 1
+    def __iter__(self):
+        return self
+    def __next__(self):
+        if self.current > self.limit:
+            raise StopIteration
+        result = ""
+        if self.current % 3 == 0 and self.current % 5 == 0:
+            result =  "FizzBuzz"
+        elif self.current % 3 == 0:
+            result =  "Fizz"
+        elif self.current % 5 == 0:
+            result =  "Buzz"
+        else:
+            result = str(self.current)
+        self.current += 1
+        return result
+
+# for seq in Fizzbuzz(20):
+#     print(seq)
